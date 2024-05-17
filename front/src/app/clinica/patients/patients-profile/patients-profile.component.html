@@ -1,0 +1,277 @@
+<div class="page-wrapper">
+    <div class="content">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" a href='#' onclick="return false;"><a >Pacientes </a></li>
+                        <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
+                        <li class="breadcrumb-item active">Ficha del paciente </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="about-info">
+                                    <h4>Ficha del paciente   <span><a href="javascript:;"><i class="feather icon-more-vertical"></i></a></span></h4>
+                                </div>
+                                <div class="doctor-profile-head">
+                                    <div class="profile-bg-img">
+                                        <!-- <img  src="assets/img/profile-bg.jpg"  alt="Profile"> -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="profile-user-box">
+                                              <div class="profile-user-img">
+                                                    <img  src="assets/img/profile-user-01.jpg"  alt="Profile">
+                                                    <div class="form-group doctor-up-files profile-edit-icon mb-0">
+                                                        <div class="uplod d-flex">
+                                                            <label class="file-upload profile-upbtn mb-0">
+                                                                <img  src="assets/img/icons/camera-icon.svg"  alt="Profile"><input type="file">
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="names-profiles">
+                                                    <h4>Silvia Ruiz</h4>
+                                                    <h5>Cocinera</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                                            <div class="follow-group">
+                                                <div class="doctor-follows">
+                                                    <h5>Citas</h5>
+                                                    <h4>45</h4>
+                                                </div>
+                                                
+                                                <div class="doctor-follows">
+                                                    <h5>Citas pendientes</h5>
+                                                    <h4>10</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                                            <div class="follow-btn-group">
+                                                <button type="submit" class="btn btn-info follow-btns">Follow</button>
+                                                <button type="submit" class="btn btn-info message-btns">Message</button>
+                                            </div> 
+                                    </div>-->
+                                        </div>
+                                </div>
+                            </div>								
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="doctor-personals-grp">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="heading-detail ">
+                                        <h4 class="mb-3">Sobre Silvia</h4>
+                                        <p>Chef en Ibiza.</p>
+                                    </div>
+                                    <div class="about-me-list">
+                                        <ul class="list-space">
+                                            <li>
+                                                <h4>Genero</h4>
+                                                <span>Femenino</span>
+                                            </li>
+                                            <li>
+                                                <h4>Tratamientos</h4>
+                                                <span>Masajes lumbares</span>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="doctor-personals-grp">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="about-me-list">
+                                        <ul class="list-space">
+                                            <li>
+                                                <h4>Gender</h4>
+                                                <span>Male</span>
+                                            </li>
+                                            <li>
+                                                <h4>Operation Done</h4>
+                                                <span>30+</span>
+                                            </li>
+                                            <li>
+                                                <h4>Designation</h4>
+                                                <span>Engineer</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="doctor-personals-grp">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content-set">
+                                        <ul class="nav">
+                                            <li>
+                                                <a href="#" onclick="return false;" [ngClass]="{'active': option_selected == 1}" (click)="optionSelected(1)"><span class="set-about-icon me-2"><img src="assets/img/icons/menu-icon-02.svg" alt=""></span>Resumen médico</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;" [ngClass]="{'active': option_selected == 2}" (click)="optionSelected(2)"><span class="set-about-icon me-2"><img src="assets/img/icons/menu-icon-16.svg" alt=""></span>Listado de citas</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ng-container *ngIf="option_selected==1">
+                                        <div class="personal-list-out">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-6">
+                                                    <div class="detail-personal">
+                                                        <h2>Nombre </h2>
+                                                        <h3>Silvia Romero Góme</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6">
+                                                    <div class="detail-personal">
+                                                        <h2>Movil </h2>
+                                                        <h3>679828579</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6">
+                                                    <div class="detail-personal">
+                                                        <h2>Email</h2>
+                                                        <h3>silviah@gmail.com</h3>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-xl-3 col-md-6">
+                                                    <div class="detail-personal">
+                                                        <h2>Location</h2>
+                                                        <h3>USA</h3>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <div class="hello-park">
+                                            <p>Silvia, quien trabaja como chef, presenta dolor lumbar posiblemente relacionado con la carga de peso en su trabajo. Este dolor podría estar asociado con el uso excesivo de la espalda debido a movimientos repetitivos o levantamiento de objetos pesados. Para abordar su situación, es esencial realizar una evaluación clínica completa, incluyendo historial médico y examen físico enfocado en la columna lumbar. Se pueden requerir estudios de imagen como radiografías o resonancia magnética para evaluar las estructuras espinales.</p>
+                                            <p>El diagnóstico diferencial puede incluir condiciones como lumbalgia mecánica, hernia de disco o estenosis espinal. El tratamiento inicial puede ser conservador e incluir reposo relativo, fisioterapia para fortalecer la musculatura lumbar, analgésicos y terapia ocupacional para mejorar la ergonomía en el trabajo.</p>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="option_selected==2">
+                                        <div class="activity">
+                                            <div class="activity-box">
+                                                <ul class="activity-list">
+                                                    <!-- Aquí comienzan las citas específicas de Silvia -->
+                                                    <li>
+                                                        <div class="activity-user">
+                                                            <!-- <a href="#" ontitle="Lesley Grauer" data-bs-toggle="tooltip" class="avatar">
+                                                                <img alt="Lesley Grauer" src="assets/img/user-02.jpg" class="img-fluid rounded-circle">
+                                                            </a> -->
+                                                        </div>
+                                                        <div class="activity-content timeline-group-blk">
+                                                            <div class="timeline-group flex-shrink-0">
+                                                                <h4>20 Oct 2022</h4>
+                                                                <span class="time">5.50 PM</span>
+                                                            </div>
+                                                            <div class="comman-activitys flex-grow-1">
+                                                                <h3>Juana Roa <span> Completó la visita del paciente </span></h3>
+                                                                <p>Es importante implementar medidas preventivas como educación sobre ergonomía y modificaciones laborales para reducir la carga física. El seguimiento continuo con profesionales de la salud ayudará a ajustar el tratamiento según la respuesta de Silvia y mejorar su calidad de vida laboral y personal.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="activity-user">
+                                                            <!-- <a href="#" ontitle="Lesley Grauer" data-bs-toggle="tooltip" class="avatar">
+                                                                <img alt="Lesley Grauer" src="assets/img/user-06.jpg" class="img-fluid rounded-circle">
+                                                            </a> -->
+                                                        </div>
+                                                        <div class="activity-content timeline-group-blk">
+                                                            <div class="timeline-group flex-shrink-0">
+                                                                <h4>Hoy</h4>
+                                                                <span class="time">4.50 PM</span>
+                                                            </div>
+                                                            <div class="comman-activitys flex-grow-1">
+                                                                <h3>Noa Peña <span> Subió 3 nuevas fotos para el evento de seguridad mundial.</span></h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                                                <ul class="nav activity-sub-list mt-2">
+                                                                    <li><img class="img-fluid" src="assets/img/activity-01.jpg" alt=""></li>
+                                                                    <li><img class="img-fluid" src="assets/img/activity-02.jpg" alt=""></li>
+                                                                    <li><img class="img-fluid" src="assets/img/activity-03.jpg" alt=""></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- Aquí puedes agregar más citas relacionadas con Silvia -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title ">Citas pendientes</h4>
+                                </div>
+                                <div class="card-body p-0 table-dash">
+                                    <div class="table-responsive">
+                                        <!--(matSortChange)="sortData($event)"-->
+                                        <table matSort  class="table mb-0 border-0 datatable custom-table patient-profile-table">
+                                            <thead>
+                                                <tr>
+                                                    <th mat-sort-header="checkbox">
+                                                        <div class="form-check check-tables">
+                                                            <input class="form-check-input" type="checkbox" value="something">
+                                                        </div>
+                                                    </th>
+                                                    <th mat-sort-header="date">Fecha</th>
+                                                    <th mat-sort-header="doctor">Especialidad</th>
+                                                    <th mat-sort-header="treatment">Tratamiento</th>
+                                                   
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let data of patientProfile">
+                                                    <td>
+                                                        <div class="form-check check-tables">
+                                                            <input class="form-check-input" type="checkbox" value="something">
+                                                        </div>
+                                                    </td>
+                                                    <td >{{data.date}} </td>
+                                                    <td >{{data.doctor}}</td>
+                                                    <td>{{data.treatment}}</td>
+                                                    <td>{{data.charges}}</td>
+                                                    <td class="text-end">
+                                                        <!-- <div class="dropdown dropdown-action">
+                                                            <a href="javascript:void(0);" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" [routerLink]="routes.editAppointment"><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+                                                                <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_appointment"><i class="fa fa-trash-alt m-r-5"></i> Delete</a>
+                                                            </div>
+                                                        </div> -->
+                                                    </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
